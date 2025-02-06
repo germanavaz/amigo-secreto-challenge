@@ -161,3 +161,45 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+
+/* Nomes da lista */
+
+.name-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.name-list li {
+    background-color: #f4f4f4;
+    padding: 8px 12px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-transform: capitalize;
+}
+
+/* Botão de remover o nome da lista */
+
+.button-remove {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.button-remove:hover {
+    background-color: #cc0000;
+}
