@@ -53,6 +53,20 @@ function removerAmigo(index) {
 }
 
 
+// Implementa uma função para sortear os amigos
+function sortearAmigo() {
+    if (listaDeAmigos.length === 0) {
+        alert("Adicione pelo menos um amigo para realizar o sorteio.");
+        return;
+    }
+    
+    const sorteadoIndex = Math.floor(Math.random() * listaDeAmigos.length);
+    const nomeSorteado = listaDeAmigos[sorteadoIndex];
+    
+    const resultado = document.getElementById("resultado");
+    resultado.innerHTML = `<li>🎉 O amigo secreto é: <span style="text-transform: capitalize; font-weight: bold;">${nomeSorteado}</span>! 🎁</li>`;
+}
+
 
 
 
