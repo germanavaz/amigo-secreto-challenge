@@ -28,5 +28,32 @@ function adicionarAmigo() {
 }
 
 
+//Implementa uma função para atualizar a lista de amigos e o botão para remover o nome da lista 
+function atualizarLista() {
+    const lista = document.getElementById("listaAmigos");
+    lista.innerHTML = "";
+    
+    listaDeAmigos.forEach((nome, index) => {
+        const item = document.createElement("li");
+        item.textContent = nome;
+        
+        const botaoRemover = document.createElement("button");
+        botaoRemover.textContent = "x";
+        botaoRemover.classList.add("button-remove");
+        botaoRemover.onclick = () => removerAmigo(index);
+        
+        item.appendChild(botaoRemover);
+        lista.appendChild(item);
+    });
+}
+
+function removerAmigo(index) {
+    listaDeAmigos.splice(index, 1);
+    atualizarLista();
+}
+
+
+
+
 
 
